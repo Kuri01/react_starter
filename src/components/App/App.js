@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './App.scss';
 import List from '../List/ListContainer';
 import PropTypes from 'prop-types';
+import Search from '../Search/SearchContainer';
 
 class App extends React.Component {
   static propTypes = {
@@ -15,7 +16,7 @@ class App extends React.Component {
       <main className={styles.component}>
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.subtitle}>{subtitle}</h2>
-
+        <Search />
         {lists.map((listData) => (
           <List key={listData.id} {...listData} />
         ))}
